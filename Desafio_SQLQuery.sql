@@ -37,29 +37,29 @@ ORDER BY Quantidade DESC;
 -- 8
 SELECT Id, PrimeiroNome, UltimoNome, Genero
 FROM Atores
-WHERE Genero = 'M';
+WHERE Genero = 'M'
 
 -- 9
 SELECT Id, PrimeiroNome, UltimoNome, Genero
 FROM Atores
 WHERE Genero = 'F'
-ORDER BY PrimeiroNome;
+ORDER BY PrimeiroNome
 
 -- 10
 SELECT Nome, Genero
 FROM Filmes
 INNER JOIN FilmesGenero on Filmes.Id = FilmesGenero.IdFilme
-INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id;
+INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id
 
 -- 11
 SELECT Nome, Genero
 FROM Filmes
 INNER JOIN FilmesGenero on Filmes.Id = FilmesGenero.IdFilme
 INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id
-WHERE Genero = 'Mistério';
+WHERE Genero = 'Mistério'
 
 -- 12
 SELECT Nome, PrimeiroNome, UltimoNome, Papel
 FROM Filmes
 INNER JOIN ElencoFilme ON Filmes.Id = ElencoFilme.IdFilme
-INNER JOIN Atores ON ElencoFilme.IdAtor = Atores.Id;
+INNER JOIN Atores ON ElencoFilme.IdAtor = Atores.Id
