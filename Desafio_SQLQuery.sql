@@ -26,13 +26,13 @@ WHERE Ano > 2000
 SELECT Nome, Ano, Duracao
 FROM Filmes
 WHERE Duracao > 100 AND Duracao < 150
-ORDER BY Duracao ASC;
+ORDER BY Duracao ASC
 
 -- 7
 SELECT Ano, COUNT(*) as Quantidade
 FROM Filmes
 GROUP BY Ano
-ORDER BY Quantidade DESC;
+ORDER BY Quantidade DESC
 
 -- 8
 SELECT Id, PrimeiroNome, UltimoNome, Genero
@@ -56,7 +56,7 @@ SELECT Nome, Genero
 FROM Filmes
 INNER JOIN FilmesGenero on Filmes.Id = FilmesGenero.IdFilme
 INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id
-WHERE Genero = 'Mistério'
+WHERE Genero = 'MistÃ©rio'
 
 -- 12
 SELECT Nome, PrimeiroNome, UltimoNome, Papel
